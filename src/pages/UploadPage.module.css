@@ -1,0 +1,367 @@
+.uploadPage {
+    background-color: #fffdfa;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 48px;
+    width: 100%;
+    height: 100%;
+}
+
+.navBar {
+    background-color: #fffdfa;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 0;
+    position: relative;
+    width: 100%;
+    z-index: 2;
+}
+
+.navContainer {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+}
+
+.menu {
+    width: 24px;
+    height: 24px;
+}
+
+.logoContainer {
+    display: flex;
+    gap: 4px;
+    height: 73px;
+    align-items: center;
+    width: 141px;
+}
+
+.logo {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 74px;
+    width: 159px;
+}
+
+.divider {
+    position: absolute;
+    bottom: 0;
+    height: 0;
+    left: -96px;
+    right: -96px;
+}
+
+.button {
+    display: flex;
+    height: 48px;
+    align-items: center;
+    justify-content: center;
+}
+
+.buttonContent {
+    background-color: rgba(29, 27, 32, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.buttonStateLayer {
+    box-sizing: border-box;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.38;
+    padding: 10px 16px;
+}
+
+.buttonLabel {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    color: #1d1b20;
+    white-space: nowrap;
+}
+
+.buttonContentActive {
+    background-color: #2b5987;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.buttonStateLayerActive {
+    box-sizing: border-box;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+    padding: 10px 16px;
+}
+
+.buttonLabelActive {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    color: white;
+    white-space: nowrap;
+}
+
+.container {
+    box-sizing: border-box;
+    display: flex;
+    height: 736px;
+    align-items: flex-start;
+    padding-bottom: 48px;
+    width: 100%;
+    z-index: 1;
+}
+
+.mainContent {
+    flex-basis: 0;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    height: 724px;
+    min-height: 1px;
+    min-width: 1px;
+    width: 100%;
+}
+
+.simpleForm {
+    background-color: #fffdfa;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    height: 724px;
+    align-items: center;
+    overflow: hidden;
+    padding: 24px 0;
+    width: 100%;
+}
+
+.title {
+    font-family: 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 32px;
+    max-width: 512px;
+    color: #28231b;
+    width: 100%;
+}
+
+.formRow {
+    background-color: #fffdfa;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    height: 556px;
+    align-items: center;
+    width: 100%;
+}
+
+.fileAttachment {
+    background-color: #fffdfa;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    align-items: flex-start;
+    max-width: 512px;
+    width: 100%;
+}
+
+.attach {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+    padding: 48px 12px;
+    border-radius: 8px;
+    width: 100%;
+    border: 1.5px dashed rgba(110, 97, 73, 0.2);
+    cursor: pointer;
+    min-height: 148px;
+}
+
+.uploadIcon {
+    overflow: hidden;
+    width: 24px;
+    height: 24px;
+}
+
+.icon {
+    position: absolute;
+}
+
+.dropzoneText {
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 15px;
+    line-height: 20px;
+    color: rgba(46, 37, 20, 0.4);
+    text-align: center;
+    white-space: nowrap;
+}
+
+.csvInfoContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.csvInfoHeader {
+    flex-basis: 0;
+    box-sizing: border-box;
+    display: flex;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: space-between;
+    line-height: 0;
+    min-height: 1px;
+    min-width: 1px;
+    padding: 0 8px;
+    font-size: 13px;
+    color: black;
+}
+
+.fileNameHeader {
+    height: 32px;
+    width: 183.865px;
+    line-height: 32px;
+}
+
+.projectHeader {
+    height: 32px;
+    width: 328.135px;
+    line-height: 32px;
+}
+
+.csvStatusRow {
+    box-sizing: border-box;
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    padding: 0 8px;
+    width: 100%;
+}
+
+.csvFileName {
+    font-family: 'Roboto', sans-serif;
+    font-size: 13px;
+    line-height: 32px;
+    color: black;
+    width: 218px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.textField {
+    flex-grow: 1;
+}
+
+.textInput {
+    width: 100%;
+    height: 56px;
+    border: 1px solid #79747e;
+    border-radius: 4px;
+    padding: 4px 16px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    color: #1d1b20;
+}
+
+.deleteIconContainer {
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+}
+
+.deleteIcon {
+    width: 100%;
+    height: 100%;
+}
+
+.noCsvStatus {
+    font-family: 'Roboto', sans-serif;
+    font-size: 13px;
+    line-height: 32px;
+    color: #79747e;
+    text-align: center;
+    width: 496px;
+}
+
+.fileRow {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 8px;
+}
+
+.fileName {
+    font-family: 'Roboto', sans-serif;
+    font-size: 13px;
+    line-height: 32px;
+    color: #1d1b20;
+}
+
+.spinnerContainer {
+    position: relative;
+    flex-shrink: 0;
+    width: 2.5rem;
+    height: 2.5rem;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.spinnerTrack {
+    position: absolute;
+    height: 38.917px;
+    width: 38.917px;
+    position: absolute;
+    inset: 2.71% 2.71% -0.01% -0.01%;
+}
+
+.spinnerActive {
+    position: absolute;
+    height: 20.363px;
+    width: 20.363px;
+    position: absolute;
+    inset: 0.17% 0.17% 48.92% 48.92%;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}

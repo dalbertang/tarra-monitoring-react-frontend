@@ -232,3 +232,59 @@ export const apiUtils = {
     throw lastError!;
   },
 };
+
+// Default API client (unauthenticated)
+export const defaultApiClient = createApiInstance();
+
+// Function to upload vibration data
+export const uploadVibrationData = async (
+  apiClient: AxiosInstance,
+  files: File[],
+  projects: string[]
+): Promise<AxiosResponse<any>> => {
+  const formData = new FormData();
+
+  files.forEach((file) => {
+    formData.append('files', file);
+  });
+
+  projects.forEach((project) => {
+    formData.append('projects', project);
+  });
+
+  const config: AxiosRequestConfig = {
+    headers: {
+      'Content-Type': 'multipart/form-data',
+    },
+  };
+
+  return apiClient.post('/api/v1/sensors/upload/vibration-data', formData, config);
+};
+
+export const generateVibrationReport = async (apiClient: AxiosInstance, reportParams: { start_date: string, end_date: string, device_ids: string[] }) => {
+    const response = await apiClient.post('/api/v1/reports/vibration', reportParams, {
+        responseType: 'blob', // Important for handling binary data like PDFs
+    });
+
+    // Extract filename from Content-Disposition header
+    const contentDisposition = response.headers['content-disposition'];
+    let filename = 'report.pdf';
+    if (contentDisposition) {
+        const filenameMatch = contentDisposition.match(/filename="(.+)"/);
+        if (filenameMatch && filenameMatch[1]) {
+            filename = filenameMatch[1];
+        }
+    }
+
+    // Create a blob from the response data
+    const url = window.URL.createObjectURL(new Blob([response.data]));
+    const link = document.createElement('a');
+    link.href = url;
+    link.setAttribute('download', filename);
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+    window.URL.revokeObjectURL(url);
+
+    return response;
+};

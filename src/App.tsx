@@ -1,3 +1,4 @@
+/// <reference types="react-helmet-async" />
 import React from 'react';
 import { Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import { useIsAuthenticated } from '@azure/msal-react';
@@ -16,6 +17,7 @@ const SettingsPage = React.lazy(() => import('./pages/SettingsPage'));
 const LoginPage = React.lazy(() => import('./pages/LoginPage'));
 const NotFoundPage = React.lazy(() => import('./pages/NotFoundPage'));
 const UnauthorizedPage = React.lazy(() => import('./pages/UnauthorizedPage'));
+const UploadPage = React.lazy(() => import('./pages/UploadPage'));
 
 export const App: React.FC = () => {
   const isAuthenticated = useIsAuthenticated();
@@ -104,6 +106,9 @@ export const App: React.FC = () => {
               
               {/* Dashboard */}
               <Route path="dashboard" element={<Dashboard />} />
+
+              {/* Upload */}
+              <Route path="upload" element={<UploadPage />} />
 
               {/* Settings */}
               <Route path="settings" element={<SettingsPage />} />

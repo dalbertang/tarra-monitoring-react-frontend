@@ -23,6 +23,7 @@ import {
   Settings as SettingsIcon,
   Dashboard as DashboardIcon,
   Sensors as SensorsIcon,
+  FileUpload as FileUploadIcon,
 } from '@mui/icons-material';
 import { useMsal, useAccount } from '@azure/msal-react';
 
@@ -69,6 +70,7 @@ export const Layout: React.FC = () => {
   // Navigation items
   const navItems = [
     { label: 'Dashboard', path: '/dashboard', icon: <DashboardIcon /> },
+    { label: 'Upload', path: '/upload', icon: <FileUploadIcon /> },
   ];
 
   return (
