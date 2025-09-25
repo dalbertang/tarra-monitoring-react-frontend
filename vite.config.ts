@@ -66,7 +66,7 @@ export default defineConfig(({ mode }) => {
     
     // Development server configuration
     server: {
-      port: 3000,
+      port: 3001,
       host: true, // Allow external connections
       strictPort: false,
       // Security headers
